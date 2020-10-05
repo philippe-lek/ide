@@ -1,0 +1,163 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+/*HEADER*/
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: black;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: white;
+  height: 2px;
+}
+nav.stroke ul li a:hover:after {
+  width: 85%;
+}
+.margin-zero {
+  margin: 0;
+}
+/*MAIN*/
+.couche-vs-code {
+  margin-top: 62px;
+  background-color: #4283cec0;
+  display: flex;
+  animation: fadeInLeft 2s;
+  padding: 2% 2%;
+}
+.image-vs-code {
+  width: 100%;
+  margin: 0;
+}
+.image-vs-code:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 0.3s;
+}
+.text-vs-code {
+  color: white;
+  align-self: center;
+  margin: auto 5%;
+  font-size: 2em;
+}
+.couche-vim {
+  background-color: #174e0d93;
+  display: flex;
+  animation: fadeInRight 2s;
+  padding: 2% 2%;
+}
+.text-vim {
+  color: white;
+  align-self: center;
+  margin: auto 5%;
+  font-size: 2em;
+}
+.image-vim {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.image-vim:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 0.3s;
+}
+.couche-php-storm {
+  background-color: #8a2c8a8c;
+  display: flex;
+  animation: fadeInLeft 2s;
+  padding: 2% 2%;
+}
+.image-php-storm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.image-php-storm:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 0.3s;
+}
+.text-php-storm {
+  color: white;
+  align-self: center;
+  margin: auto 5%;
+  font-size: 2em;
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: left;
+  margin: 10px 0;
+}
+.footer ul a {
+  padding: 5px 0;
+  text-transform: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+}
+.footer a:hover {
+  color: white;
+}
